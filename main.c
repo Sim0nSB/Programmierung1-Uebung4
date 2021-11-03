@@ -6,8 +6,8 @@ int aufgabe1(), aufgabe2(), aufgabe3(), aufgabe4(), aufgabe5(), aufgabe6();
 
 int main(void) {
 
-  aufgabe1();
-  //aufgabe2();
+  //aufgabe1();
+  aufgabe2();
   //aufgabe3();
   //aufgabe4();
   //aufgabe5();
@@ -28,5 +28,18 @@ int aufgabe1() {
     } else {
       printf("Eine Natürliche Zahl eingeben");
     }
+  return 0;
+}
+
+//Aufgabe 2
+int aufgabe2(){
+  int eingabe,ausgabe = 0;
+  while(ausgabe <= 100){
+    eingabe = 0;
+    printf("Zahl: ");
+    scanf("%d", &eingabe);
+    ausgabe += eingabe;
+  }
+  printf("Summe = %d", ausgabe);
   return 0;
 }
