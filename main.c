@@ -7,8 +7,8 @@ int aufgabe1(), aufgabe2(), aufgabe3(), aufgabe4(), aufgabe5(), aufgabe6();
 int main(void) {
 
   //aufgabe1();
-  aufgabe2();
-  //aufgabe3();
+  //aufgabe2();
+  aufgabe3();
   //aufgabe4();
   //aufgabe5();
   //aufgabe6();
@@ -41,5 +41,25 @@ int aufgabe2(){
     ausgabe += eingabe;
   }
   printf("Summe = %d", ausgabe);
+  return 0;
+}
+
+//Aufgabe 3
+int aufgabe3(){
+  int untereGrenze, obereGrenze;
+  printf("Untere Grenze: ");
+  scanf("%d", &untereGrenze);
+  printf("Obere Grenze: ");
+  scanf("%d", &obereGrenze);
+  printf("Die Reihe lautet: ");
+  if(untereGrenze > obereGrenze){
+    int temp;
+    temp = obereGrenze;
+    obereGrenze = untereGrenze;
+    untereGrenze = temp;
+  }
+  for(int i = untereGrenze; i<= obereGrenze; i++){
+    printf("%d ",i);
+  }
   return 0;
 }
