@@ -8,8 +8,8 @@ int main(void) {
 
   //aufgabe1();
   //aufgabe2();
-  aufgabe3();
-  //aufgabe4();
+  //aufgabe3();
+  aufgabe4();
   //aufgabe5();
   //aufgabe6();
   
@@ -60,6 +60,31 @@ int aufgabe3(){
   }
   for(int i = untereGrenze; i<= obereGrenze; i++){
     printf("%d ",i);
+  }
+  return 0;
+}
+
+//Aufgabe 4
+int aufgabe4() {
+  int untereGrenze, obereGrenze;
+  printf("Untere Grenze: ");
+  scanf("%d", & untereGrenze);
+  printf("Obere Grenze: ");
+  scanf("%d", & obereGrenze);
+  printf("Die Reihe lautet: ");
+  if (untereGrenze > obereGrenze) {
+    int temp;
+    temp = obereGrenze;
+    obereGrenze = untereGrenze;
+    untereGrenze = temp;
+  }
+  for (int i = untereGrenze; i <= obereGrenze; i++) {
+    if(i % 3 == 0 && i % 4 != 0){
+      printf("%d ", i);
+    }
+    if(i % 3 != 0 && i % 4 == 0){
+      printf("%d ", i);
+    }    
   }
   return 0;
 }
