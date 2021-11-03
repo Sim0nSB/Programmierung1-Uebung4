@@ -9,8 +9,8 @@ int main(void) {
   //aufgabe1();
   //aufgabe2();
   //aufgabe3();
-  aufgabe4();
-  //aufgabe5();
+  //aufgabe4();
+  aufgabe5();
   //aufgabe6();
   
 
@@ -26,7 +26,7 @@ int aufgabe1() {
       }
       printf("%d", ausgabe);
     } else {
-      printf("Eine Natürliche Zahl eingeben");
+      printf("Eine Natürliche Zahl eingeben!");
     }
   return 0;
 }
@@ -85,6 +85,22 @@ int aufgabe4() {
     if(i % 3 != 0 && i % 4 == 0){
       printf("%d ", i);
     }    
+  }
+  return 0;
+}
+
+//Aufgabe 5
+int aufgabe5(){
+  int laengeRechteck, breiteRechteck;
+  printf("Länge: ");
+  scanf("%d", &laengeRechteck);
+  printf("Breite: ");
+  scanf("%d", &breiteRechteck);
+  for(int i = 0; i < laengeRechteck; i++){
+    for(int j = 0; j < breiteRechteck; j++){
+      printf("*");
+    }
+    printf("\n");
   }
   return 0;
 }
