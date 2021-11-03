@@ -10,8 +10,8 @@ int main(void) {
   //aufgabe2();
   //aufgabe3();
   //aufgabe4();
-  aufgabe5();
-  //aufgabe6();
+  //aufgabe5();
+  aufgabe6();
   
 
 }
@@ -26,7 +26,7 @@ int aufgabe1() {
       }
       printf("%d", ausgabe);
     } else {
-      printf("Eine Natürliche Zahl eingeben!");
+      printf("Eine positive Ganzzahl eingeben!");
     }
   return 0;
 }
@@ -96,8 +96,28 @@ int aufgabe5(){
   scanf("%d", &laengeRechteck);
   printf("Breite: ");
   scanf("%d", &breiteRechteck);
-  for(int i = 0; i < laengeRechteck; i++){
-    for(int j = 0; j < breiteRechteck; j++){
+  for(int i = 0; i < breiteRechteck; i++){
+    for(int j = 0; j < laengeRechteck; j++){
+      printf("*");
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+//Aufgabe 6
+int aufgabe6(){
+  int laengeRechteck, breiteRechteck;
+  printf("Länge: ");
+  scanf("%d", &laengeRechteck);
+  printf("Breite: ");
+  scanf("%d", &breiteRechteck);
+  for(int i = 0; i < breiteRechteck; i++){
+    
+    
+
+
+    for(int j = 0; j < laengeRechteck; j++){
       printf("*");
     }
     printf("\n");
