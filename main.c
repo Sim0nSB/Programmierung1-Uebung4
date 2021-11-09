@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+#include <float.h>
 
 
-int aufgabe1(), aufgabe2(), aufgabe3(), aufgabe4(), aufgabe5(), aufgabe6();
+int aufgabe1(), aufgabe2(), aufgabe3(), aufgabe4(), aufgabe5(), aufgabe6(), aufgabe7(), aufgabe8();
 
 int main(void) {
 
@@ -11,7 +13,9 @@ int main(void) {
   //aufgabe3();
   //aufgabe4();
   //aufgabe5();
-  aufgabe6();
+  //aufgabe6();
+  //aufgabe7();
+  aufgabe8();
   
 
 }
@@ -123,4 +127,47 @@ int aufgabe6(){
     printf("\n");
   }
   return 0;
+}
+
+//Aufgabe 7
+int aufgabe7() {
+
+    int n;
+    double summe=0;
+    printf("n = ?\n");
+    scanf("%d", &n);
+
+    for(int i=1; i<=n; i++) {
+        summe = summe + ( 1.0 / (2 * i));
+    }
+    
+    printf("Σ(1, %d) = %lf", n, summe);
+    
+    return EXIT_SUCCESS;
+}
+
+//Aufgabe 8
+double eingabe(char * str) {
+    double eingabe;
+    printf("Geben Sie %s ein: ", str);
+    scanf("%lf", &eingabe);
+    return eingabe;
+}
+
+int aufgabe8()
+{
+    
+    double epsilon = eingabe("Epsilon");
+    double lastIterationValue=1;
+    double vorzeichen = 1.0;
+    double sum = 0;
+    
+    for(int i=0; fabs(sum - lastIterationValue) > epsilon; i++) {
+        lastIterationValue = sum;
+        sum = sum + (vorzeichen * (1.0 / ((2.0 * i) + 1.0)));
+        vorzeichen = vorzeichen * -1;
+    }
+    
+    printf("Pi = %.*e", DECIMAL_DIG, 4.0*sum);
+    return EXIT_SUCCESS;
 }
