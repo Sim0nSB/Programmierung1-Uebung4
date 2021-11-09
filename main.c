@@ -113,12 +113,12 @@ int aufgabe6(){
   printf("Breite: ");
   scanf("%d", &breiteRechteck);
   for(int i = 0; i < breiteRechteck; i++){
-    
-    
-
-
     for(int j = 0; j < laengeRechteck; j++){
-      printf("*");
+      if(i==0 || i==breiteRechteck-1 || j==0 || j==laengeRechteck-1) {
+			    printf("*");
+		    } else {
+		        printf(" ");
+		    }
     }
     printf("\n");
   }
